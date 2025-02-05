@@ -93,7 +93,7 @@ export const Editor = () => {
         types: ["heading", "paragraph"],
       }),
     ],
-    content: "This is a basic example of a text.",
+    content: "",
   });
 
   return (
