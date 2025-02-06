@@ -1,7 +1,12 @@
 "use client";
 
 import { useMutation } from "convex/react";
+import { useState } from "react";
+import { toast } from "sonner";
+
 import { Id } from "../../convex/_generated/dataModel";
+import { api } from "../../convex/_generated/api";
+
 import {
   AlertDialog,
   AlertDialogAction,
@@ -13,9 +18,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "./ui/alert-dialog";
-import { api } from "../../convex/_generated/api";
-import { useState } from "react";
-import { toast } from "sonner";
 
 interface RemoveDialogProps {
   documentId: Id<"documents">;

@@ -1,11 +1,11 @@
-import { Button } from "@/components/ui/button";
 import {
   ExternalLinkIcon,
   FilePenIcon,
   MoreVertical,
   TrashIcon,
 } from "lucide-react";
-import { Id } from "../../../convex/_generated/dataModel";
+
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -14,6 +14,8 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { RemoveDialog } from "@/components/remove-dialog";
 import { RenameDialog } from "@/components/rename-dialog";
+
+import { Id } from "../../../convex/_generated/dataModel";
 
 interface DocumentMenuProps {
   documentId: Id<"documents">;

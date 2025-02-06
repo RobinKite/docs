@@ -17,14 +17,13 @@ import { Color } from "@tiptap/extension-color";
 import Highlight from "@tiptap/extension-highlight";
 import Link from "@tiptap/extension-link";
 import TextAlign from "@tiptap/extension-text-align";
+import { useLiveblocksExtension } from "@liveblocks/react-tiptap";
 
 import { FontSizeExtension } from "@/extensions/font-size";
 import { LineHeightExtension } from "@/extensions/line-height";
-
 import { useEditorStore } from "@/store/use-editor-store";
-import Ruler from "./ruler";
 
-import { useLiveblocksExtension } from "@liveblocks/react-tiptap";
+import Ruler from "./ruler";
 import { Threads } from "./threads";
 
 export const Editor = () => {

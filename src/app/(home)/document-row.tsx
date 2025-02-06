@@ -1,10 +1,13 @@
-import { TableCell, TableRow } from "@/components/ui/table";
-import { Doc } from "../../../convex/_generated/dataModel";
 import { SiGoogledocs } from "react-icons/si";
 import { format } from "date-fns";
 import { Building2Icon, CircleUserIcon } from "lucide-react";
-import { DocumentMenu } from "./document-menu";
 import { useRouter } from "next/navigation";
+
+import { TableCell, TableRow } from "@/components/ui/table";
+
+import { Doc } from "../../../convex/_generated/dataModel";
+
+import { DocumentMenu } from "./document-menu";
 
 interface DocumentRowProps {
   document: Doc<"documents">;

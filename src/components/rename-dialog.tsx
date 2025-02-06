@@ -1,7 +1,12 @@
 "use client";
 
 import { useMutation } from "convex/react";
+import React, { useState } from "react";
+import { toast } from "sonner";
+
 import { Id } from "../../convex/_generated/dataModel";
+import { api } from "../../convex/_generated/api";
+
 import {
   Dialog,
   DialogContent,
@@ -11,11 +16,9 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "./ui/dialog";
-import { api } from "../../convex/_generated/api";
-import React, { useState } from "react";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
-import { toast } from "sonner";
+
 
 interface RenameDialogProps {
   documentId: Id<"documents">;

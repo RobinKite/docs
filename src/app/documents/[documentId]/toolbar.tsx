@@ -1,12 +1,7 @@
 "use client";
 import { useState } from "react";
 import { type Level } from "@tiptap/extension-heading";
-
 import { type ColorResult, CompactPicker, SketchPicker } from "react-color";
-
-import { Separator } from "@/components/ui/separator";
-import { cn } from "@/lib/utils";
-import { useEditorStore } from "@/store/use-editor-store";
 import {
   AlignCenterIcon,
   AlignJustifyIcon,
@@ -35,13 +30,16 @@ import {
   Undo2Icon,
   UploadIcon,
 } from "lucide-react";
+
+import { Separator } from "@/components/ui/separator";
+import { cn } from "@/lib/utils";
+import { useEditorStore } from "@/store/use-editor-store";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-
 import {
   Dialog,
   DialogContent,
