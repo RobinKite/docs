@@ -29,15 +29,15 @@ export const DocumentsTable = ({
   status,
 }: DocumentsTableProps) => {
   return (
-    <div className="max-w-screen-xl mx-auto px-16 py-6 flex flex-col gap-5">
+    <div className="mx-auto flex max-w-screen-xl flex-col gap-5 px-16 py-6">
       {documents === undefined ? (
-        <div className="flex justify-center items-center h-24">
-          <LoaderIcon className="animate-spin text-muted-foreground size-5" />
+        <div className="flex h-24 items-center justify-center">
+          <LoaderIcon className="size-5 animate-spin text-muted-foreground" />
         </div>
       ) : (
         <Table>
           <TableHeader>
-            <TableRow className="hover:bg-transparent border-none">
+            <TableRow className="border-none hover:bg-transparent">
               <TableHead>Name</TableHead>
               <TableHead>&nbsp;</TableHead>
               <TableHead className="hidden md:table-cell">Shared</TableHead>

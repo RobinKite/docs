@@ -6,8 +6,8 @@ import { SearchInput } from "./search-input";
 
 export const Navbar = () => {
   return (
-    <nav className="flex items-center justify-between h-full w-full">
-      <div className="flex gap-3 items-center shrink-0 pr-6">
+    <nav className="flex h-full w-full items-center justify-between">
+      <div className="flex shrink-0 items-center gap-3 pr-6">
         <Link href="/">
           <Image
             src="/logo.svg"
@@ -19,7 +19,7 @@ export const Navbar = () => {
         <h3 className="text-xl">Docs</h3>
       </div>
       <SearchInput />
-      <div className="flex gap-3 items-center pl-6">
+      <div className="flex items-center gap-3 pl-6">
         <OrganizationSwitcher
           afterCreateOrganizationUrl="/"
           afterLeaveOrganizationUrl="/"

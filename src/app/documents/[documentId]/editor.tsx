@@ -103,9 +103,9 @@ export const Editor = () => {
   });
 
   return (
-    <div className="size-full overflow-x-auto bg-[#f9fbfd] px-4 print:p-0 print:bg-white print:overflow-visible">
+    <div className="size-full overflow-x-auto bg-[#f9fbfd] px-4 print:overflow-visible print:bg-white print:p-0">
       <Ruler />
-      <div className="min-w-max flex justify-center w-[816px] py-4 print:p-0 mx-auto print:w-full print:min-w-0">
+      <div className="mx-auto flex w-[816px] min-w-max justify-center py-4 print:w-full print:min-w-0 print:p-0">
         <EditorContent editor={editor} />
         <Threads editor={editor} />
       </div>

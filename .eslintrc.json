@@ -1,5 +1,5 @@
 {
-  "plugins": ["import"],
+  "plugins": ["import", "tailwindcss"],
   "rules": {
     "import/order": [
       "error",
@@ -14,7 +14,8 @@
         ],
         "newlines-between": "always"
       }
-    ]
+    ],
+    "tailwindcss/classnames-order": ["error", { "officialSorting": true }]
   },
   "extends": ["next/core-web-vitals", "next/typescript"]
 }

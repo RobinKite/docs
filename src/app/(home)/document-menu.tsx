@@ -45,7 +45,7 @@ export const DocumentMenu = ({
           <DropdownMenuItem
             onSelect={(e) => e.preventDefault()}
             onClick={(e) => e.stopPropagation()}>
-            <FilePenIcon className="size-4 mr-2" />
+            <FilePenIcon className="mr-2 size-4" />
             Rename
           </DropdownMenuItem>
         </RenameDialog>
@@ -53,12 +53,12 @@ export const DocumentMenu = ({
           <DropdownMenuItem
             onSelect={(e) => e.preventDefault()}
             onClick={(e) => e.stopPropagation()}>
-            <TrashIcon className="size-4 mr-2" />
+            <TrashIcon className="mr-2 size-4" />
             Remove
           </DropdownMenuItem>
         </RemoveDialog>
         <DropdownMenuItem onClick={() => onNewTab(documentId)}>
-          <ExternalLinkIcon className="size-4 mr-2" />
+          <ExternalLinkIcon className="mr-2 size-4" />
           Open in new tab
         </DropdownMenuItem>
       </DropdownMenuContent>

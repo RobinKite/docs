@@ -24,7 +24,7 @@ export const DocumentRow = ({ document }: DocumentRowProps) => {
         <SiGoogledocs className="size-6 fill-blue-500" />
       </TableCell>
       <TableCell className="font-medium md:w-[45%]">{document.title}</TableCell>
-      <TableCell className="text-muted-foreground hidden md:flex items-center gap-2">
+      <TableCell className="hidden items-center gap-2 text-muted-foreground md:flex">
         {document.organizationId ? (
           <Building2Icon className="size-4" />
         ) : (
@@ -32,7 +32,7 @@ export const DocumentRow = ({ document }: DocumentRowProps) => {
         )}
         {document.organizationId ? "Organization" : "Personal"}
       </TableCell>
-      <TableCell className="text-muted-foreground hidden md:table-cell">
+      <TableCell className="hidden text-muted-foreground md:table-cell">
         {format(new Date(document._creationTime), "MMM dd yyyy")}
       </TableCell>
       <TableCell className="flex justify-end">

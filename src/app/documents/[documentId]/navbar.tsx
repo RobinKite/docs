@@ -90,7 +90,7 @@ export const Navbar = () => {
 
   return (
     <nav className="flex items-center justify-between">
-      <div className="flex gap-2 items-center">
+      <div className="flex items-center gap-2">
         <Link href="/">
           <Image
             width={36}
@@ -102,67 +102,67 @@ export const Navbar = () => {
         <div className="flex flex-col">
           <DocumentInput />
           <div className="flex">
-            <Menubar className="border-none bg-transparent shadow-none h-auto p-0">
+            <Menubar className="h-auto border-none bg-transparent p-0 shadow-none">
               <MenubarMenu>
-                <MenubarTrigger className="text-sm font-normal py-0.5 px-[7px] rounded-sm hover:bg-muted h-auto">
+                <MenubarTrigger className="h-auto rounded-sm px-[7px] py-0.5 text-sm font-normal hover:bg-muted">
                   File
                 </MenubarTrigger>
                 <MenubarContent className="print:hidden">
                   <MenubarSub>
                     <MenubarSubTrigger>
-                      <FileIcon className="size-4 mr-2" /> Save
+                      <FileIcon className="mr-2 size-4" /> Save
                     </MenubarSubTrigger>
                     <MenubarSubContent>
                       <MenubarItem onClick={onSaveJSON}>
-                        <FileJsonIcon className="size-4 mr-2" /> JSON
+                        <FileJsonIcon className="mr-2 size-4" /> JSON
                       </MenubarItem>
                       <MenubarItem onClick={onSaveHTML}>
-                        <GlobeIcon className="size-4 mr-2" /> HTML
+                        <GlobeIcon className="mr-2 size-4" /> HTML
                       </MenubarItem>
                       <MenubarItem onClick={() => window.print()}>
-                        <BsFilePdf className="size-4 mr-2" /> PDF
+                        <BsFilePdf className="mr-2 size-4" /> PDF
                       </MenubarItem>
                       <MenubarItem onClick={onSaveText}>
-                        <FileTextIcon className="size-4 mr-2" /> Text
+                        <FileTextIcon className="mr-2 size-4" /> Text
                       </MenubarItem>
                     </MenubarSubContent>
                   </MenubarSub>
                   <MenubarItem>
-                    <FilePlusIcon className="size-4 mr-2" /> New Document
+                    <FilePlusIcon className="mr-2 size-4" /> New Document
                   </MenubarItem>
                   <MenubarSeparator />
                   <MenubarItem>
-                    <FilePenIcon className="size-4 mr-2" /> Rename
+                    <FilePenIcon className="mr-2 size-4" /> Rename
                   </MenubarItem>
                   <MenubarItem>
-                    <TrashIcon className="size-4 mr-2" /> Remove
+                    <TrashIcon className="mr-2 size-4" /> Remove
                   </MenubarItem>
                   <MenubarSeparator />
                   <MenubarItem onClick={() => window.print()}>
-                    <PrinterIcon className="size-4 mr-2" /> Print
+                    <PrinterIcon className="mr-2 size-4" /> Print
                     <MenubarShortcut>&#x2318;P</MenubarShortcut>
                   </MenubarItem>
                 </MenubarContent>
               </MenubarMenu>
               <MenubarMenu>
-                <MenubarTrigger className="text-sm font-normal py-0.5 px-[7px] rounded-sm hover:bg-muted h-auto">
+                <MenubarTrigger className="h-auto rounded-sm px-[7px] py-0.5 text-sm font-normal hover:bg-muted">
                   Edit
                 </MenubarTrigger>
                 <MenubarContent>
                   <MenubarItem
                     onClick={() => editor?.chain().focus().undo().run()}>
-                    <Undo2Icon className="size-4 mr-2" /> Undo
+                    <Undo2Icon className="mr-2 size-4" /> Undo
                     <MenubarShortcut>&#x2318;Z</MenubarShortcut>
                   </MenubarItem>
                   <MenubarItem
                     onClick={() => editor?.chain().focus().redo().run()}>
-                    <Redo2Icon className="size-4 mr-2" /> Redo
+                    <Redo2Icon className="mr-2 size-4" /> Redo
                     <MenubarShortcut>&#x2318;Y</MenubarShortcut>
                   </MenubarItem>
                 </MenubarContent>
               </MenubarMenu>
               <MenubarMenu>
-                <MenubarTrigger className="text-sm font-normal py-0.5 px-[7px] rounded-sm hover:bg-muted h-auto">
+                <MenubarTrigger className="h-auto rounded-sm px-[7px] py-0.5 text-sm font-normal hover:bg-muted">
                   Insert
                 </MenubarTrigger>
                 <MenubarContent>
@@ -190,41 +190,41 @@ export const Navbar = () => {
                 </MenubarContent>
               </MenubarMenu>
               <MenubarMenu>
-                <MenubarTrigger className="text-sm font-normal py-0.5 px-[7px] rounded-sm hover:bg-muted h-auto">
+                <MenubarTrigger className="h-auto rounded-sm px-[7px] py-0.5 text-sm font-normal hover:bg-muted">
                   Format
                 </MenubarTrigger>
                 <MenubarContent>
                   <MenubarSub>
                     <MenubarSubTrigger>
-                      <TextIcon className="size-4 mr-2" /> Text
+                      <TextIcon className="mr-2 size-4" /> Text
                     </MenubarSubTrigger>
                     <MenubarSubContent>
                       <MenubarItem
                         onClick={() =>
                           editor?.chain().focus().toggleBold().run()
                         }>
-                        <BoldIcon className="size-4 mr-2" />
+                        <BoldIcon className="mr-2 size-4" />
                         Bold <MenubarShortcut>&#x2318;B</MenubarShortcut>
                       </MenubarItem>
                       <MenubarItem
                         onClick={() =>
                           editor?.chain().focus().toggleItalic().run()
                         }>
-                        <ItalicIcon className="size-4 mr-2" />
+                        <ItalicIcon className="mr-2 size-4" />
                         Italic <MenubarShortcut>&#x2318;I</MenubarShortcut>
                       </MenubarItem>
                       <MenubarItem
                         onClick={() =>
                           editor?.chain().focus().toggleUnderline().run()
                         }>
-                        <UnderlineIcon className="size-4 mr-2" />
+                        <UnderlineIcon className="mr-2 size-4" />
                         Underline <MenubarShortcut>&#x2318;U</MenubarShortcut>
                       </MenubarItem>
                       <MenubarItem
                         onClick={() =>
                           editor?.chain().focus().toggleStrike().run()
                         }>
-                        <StrikethroughIcon className="size-4 mr-2" />
+                        <StrikethroughIcon className="mr-2 size-4" />
                         Strikethrough&nbsp;&nbsp;
                       </MenubarItem>
                     </MenubarSubContent>
@@ -233,7 +233,7 @@ export const Navbar = () => {
                     onClick={() =>
                       editor?.chain().focus().unsetAllMarks().run()
                     }>
-                    <RemoveFormattingIcon className="size-4 mr-2" />
+                    <RemoveFormattingIcon className="mr-2 size-4" />
                     Clear formatting
                   </MenubarItem>
                 </MenubarContent>
@@ -242,7 +242,7 @@ export const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="flex gap-3 items-center pl-6">
+      <div className="flex items-center gap-3 pl-6">
         <OrganizationSwitcher
           afterCreateOrganizationUrl="/"
           afterLeaveOrganizationUrl="/"

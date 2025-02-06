@@ -12,7 +12,7 @@ const DocumentIdPage = async ({ params }: DocumentIdPageProps) => {
 
   return (
     <div className="min-h-screen bg-[#fafbfd]">
-      <div className="flex flex-col px-4 pt-2 gap-y-2 fixed top-0 left-0 right-0 z-10 bg-[#fafbfd] print:hidden">
+      <div className="fixed left-0 right-0 top-0 z-10 flex flex-col gap-y-2 bg-[#fafbfd] px-4 pt-2 print:hidden">
         <Navbar />
         <Toolbar />
       </div>
