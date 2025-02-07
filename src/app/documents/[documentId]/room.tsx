@@ -16,7 +16,7 @@ import { Id } from "../../../../convex/_generated/dataModel";
 
 import { getDocuments, getUsers } from "./actions";
 
-type User = { id: string; name: string; avatar: string };
+type User = { id: string; name: string; avatar: string; color: string };
 
 export function Room({ children }: { children: ReactNode }) {
   const params = useParams();
