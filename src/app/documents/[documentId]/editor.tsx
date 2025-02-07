@@ -35,7 +35,10 @@ export const Editor = ({ initialContent }: EditorProps) => {
   const leftMargin = useStorage((root) => root.leftMargin);
   const rightMargin = useStorage((root) => root.rightMargin);
 
-  const liveblocks = useLiveblocksExtension({ initialContent });
+  const liveblocks = useLiveblocksExtension({
+    initialContent,
+    offlineSupport_experimental: true,
+  });
   const { setEditor } = useEditorStore();
 
   const editor = useEditor({
