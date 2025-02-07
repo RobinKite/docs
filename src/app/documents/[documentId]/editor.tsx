@@ -24,6 +24,10 @@ import { FontSizeExtension } from "@/extensions/font-size";
 import { LineHeightExtension } from "@/extensions/line-height";
 import { useEditorStore } from "@/store/use-editor-store";
 import { LEFT_MARGIN_DEFAULT, RIGHT_MARGIN_DEFAULT } from "@/constants/margins";
+import {
+  PAGE_MIN_HEIGHT_TAILWINDCSS,
+  PAGE_WIDTH_TAILWINDCSS,
+} from "@/constants/page-size";
 
 import Ruler from "./ruler";
 import { Threads } from "./threads";
@@ -73,8 +77,7 @@ export const Editor = ({ initialContent }: EditorProps) => {
     editorProps: {
       attributes: {
         style: `padding-left:${leftMargin}px; padding-right:${rightMargin}px;`,
-        class:
-          "focus:outline-none print:border-0 bg-white border border-[#c7c7c7] flex flex-col min-h-[1054px] w-[816px] pt-10 pr-14 pb-10 cursor-text",
+        class: `focus:outline-none print:border-0 bg-white border border-[#c7c7c7] flex flex-col ${PAGE_MIN_HEIGHT_TAILWINDCSS} ${PAGE_WIDTH_TAILWINDCSS} pt-10 pr-14 pb-10 cursor-text`,
       },
     },
     extensions: [
@@ -119,7 +122,8 @@ export const Editor = ({ initialContent }: EditorProps) => {
   return (
     <div className="size-full overflow-x-auto bg-[#f9fbfd] px-4 print:overflow-visible print:bg-white print:p-0">
       <Ruler />
-      <div className="mx-auto flex w-[816px] min-w-max justify-center py-4 print:w-full print:min-w-0 print:p-0">
+      <div
+        className={`mx-auto flex ${PAGE_WIDTH_TAILWINDCSS} min-w-max justify-center py-4 print:w-full print:min-w-0 print:p-0`}>
         <EditorContent editor={editor} />
         <Threads editor={editor} />
       </div>

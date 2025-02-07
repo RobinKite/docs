@@ -3,18 +3,20 @@ import { FaCaretDown } from "react-icons/fa";
 import { useStorage, useMutation } from "@liveblocks/react";
 
 import { LEFT_MARGIN_DEFAULT, RIGHT_MARGIN_DEFAULT } from "@/constants/margins";
+import { PAGE_WIDTH, PAGE_WIDTH_TAILWINDCSS } from "@/constants/page-size";
 
 const markers = Array.from({ length: 83 }, (_, i) => i);
 
 const Ruler = () => {
   const leftMargin =
     useStorage((root) => root.leftMargin) ?? LEFT_MARGIN_DEFAULT;
+  const rightMargin =
+    useStorage((root) => root.rightMargin) ?? RIGHT_MARGIN_DEFAULT;
+
   const setLeftMargin = useMutation(({ storage }, position: number) => {
     storage.set("leftMargin", position);
   }, []);
 
-  const rightMargin =
-    useStorage((root) => root.rightMargin) ?? RIGHT_MARGIN_DEFAULT;
   const setRightMargin = useMutation(({ storage }, position: number) => {
     storage.set("rightMargin", position);
   }, []);
@@ -32,7 +34,6 @@ const Ruler = () => {
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
-    const PAGE_WIDTH = 816;
     const MIN_SPACE = 100;
 
     if ((isDraggingLeft || isDraggingRight) && rulerRef.current) {
@@ -78,7 +79,7 @@ const Ruler = () => {
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
-      className="relative mx-auto flex h-6 w-[816px] select-none items-end border-b border-gray-300 print:hidden">
+      className={`relative mx-auto flex h-6 ${PAGE_WIDTH_TAILWINDCSS} select-none items-end border-b border-gray-300 print:hidden`}>
       <div
         id="ruler-container"
         className="relative h-full w-full">
@@ -97,9 +98,9 @@ const Ruler = () => {
           onDoubleClick={handleRightDoubleClick}
         />
         <div className="absolute inset-x-0 bottom-0 h-full">
-          <div className="relative h-full w-[816px]">
+          <div className={`relative h-full ${PAGE_WIDTH_TAILWINDCSS}`}>
             {markers.map((marker) => {
-              const position = (marker * 816) / 82;
+              const position = (marker * PAGE_WIDTH) / 82;
               return (
                 <div
                   key={marker}
