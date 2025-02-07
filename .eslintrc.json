@@ -1,0 +1,21 @@
+{
+  "plugins": ["import", "tailwindcss"],
+  "rules": {
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "newlines-between": "always"
+      }
+    ],
+    "tailwindcss/classnames-order": ["error", { "officialSorting": true }]
+  },
+  "extends": ["next/core-web-vitals", "next/typescript"]
+}
