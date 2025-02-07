@@ -17,7 +17,6 @@ import { templates } from "@/constants/templates";
 
 import { api } from "../../../convex/_generated/api";
 
-
 export const TemplateGallery = () => {
   const router = useRouter();
   const create = useMutation(api.documents.create);
@@ -53,7 +52,9 @@ export const TemplateGallery = () => {
                   )}>
                   <button
                     disabled={isCreating}
-                    onClick={() => onTemplateClick(template.label, "")}
+                    onClick={() =>
+                      onTemplateClick(template.label, template.initialContent)
+                    }
                     style={{
                       backgroundImage: `url(${template.imageUrl})`,
                       backgroundSize: "cover",
