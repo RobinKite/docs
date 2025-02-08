@@ -1,38 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This project is hosted on [Vercel](https://docs-three-fawn-38.vercel.app/).<br/>
 
-## Getting Started
+A fully functional Google Docs clone built in just 3 days, featuring real-time collaboration, an advanced TipTap editor, comments, mentions, notifications, and organization workspaces. This project leverages modern web technologies to provide a seamless document editing and sharing experience.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- 📝 Rich Text Editor - Built with TipTap, supporting custom extensions and advanced text formatting.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 🤝 Real-time Collaboration - Edit documents simultaneously with multiple users.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 💭 Comments and Mentions - Inline comments with user mentions for improved teamwork.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 🔔 Notifications System - Stay updated on document changes and mentions.
 
-## Learn More
+- 📑 Document Templates - Quickly create new documents with predefined templates.
 
-To learn more about Next.js, take a look at the following resources:
+- 📋 Copy and Paste Formatting - Maintain consistent styles across documents.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- ↩️ Undo/Redo History - Track changes and revert to previous edits.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- 📊 Table Support - Insert and modify tables for structured content.
 
-## Deploy on Vercel
+- 🖼️ Image Uploads - Seamlessly add images to documents.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- 📏 Margin Controls - Adjust document layout with customizable margins.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- ⬇️ Export Options - Save documents as PDF, HTML, TXT, or JSON.
 
-> > > > > > > 59f1b933a6ae5eec4300a69e967abf86fc866e1d
+- 👥 User Profiles - Personalized user accounts.
+
+- 🏢 Organization Workspaces - Collaborate within dedicated workspaces.
+
+- ✉️ Organization Invites - Easily invite team members to collaborate.
+
+- 🔒 Authentication - Secure login and user authentication.
+
+- 📱 Responsive Design - Optimized for desktops, tablets, and mobile devices.
+
+- 🎯 Cursor Tracking - See collaborators' cursors in real time.
+
+- 🎨 Text Formatting Tools - Bold, italic, underline, highlights, and more.
+
+- 📝 Lists and Checklists - Organize tasks with bullet points and checkboxes.
+
+- 🔗 Link Embedding - Insert and preview links directly in documents.
+
+## 🛠 Tech Stack
+
+- Next.js 15 — React framework for server-side rendering.
+
+- React 19 — The latest version of React.
+
+- Liveblocks — Real-time collaboration backend.
+
+- Tiptap — Headless rich-text editor based on ProseMirror.
+
+- Clerk — Authentication and user management.
+
+- Convex — Scalable real-time backend.
+
+- Tailwind CSS — Utility-first styling framework.
+
+- Zustand — State management for React.
+
+- ShadCN – UI components built on Radix UI and Tailwind.
+
+## 🔮 Future Improvements
+
+- More export formats (DOCX).
+
+- Create tables dynamically using a matrix, rather than relying on preconfigured button options like 1x1 or 3x3.
+
+- Redirect the user to the main page if the document is not found, instead of making them stuck on an error page.
